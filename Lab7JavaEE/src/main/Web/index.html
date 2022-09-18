@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Ввод данных!</title>
+</head>
+<body>
+<div class="divIndex">
+    <h1>Страница для ввода данных</h1>
+    <p>
+        Калькуля́тор (лат. calculātor «счётчик») — электронное вычислительное устройство для выполнения операций над числами или алгебраическими формулами.<br>
+        Введите данные, чтобы получить результат на другой странице.
+    </p>
+    <form action="result.html" name="inputData" id="inputData" method="get">
+        <p>Операнд 1: <label for="firstOp"></label><input type="text" id="firstOp" name="firstOp" pattern="[+-]?\d+(\.\d+)?" placeholder="Введите операнд 1" maxlength="6"></p>
+        <p>Операнд 2: <label for="secondOp"></label><input type="text" id="secondOp" name="secondOp" pattern="[+-]?\d+(\.\d+)?" placeholder="Введите операнд 2" maxlength="6"></p>
+        <p>Выберите операцию:</p>
+        <div class="radioBut">
+            <p><input type="radio" id="plus" name="operation" checked="checked" value="+">
+                <label for="plus">+</label></p>
+            <p><input type="radio" id="minus" name="operation" value="-">
+                <label for="minus">-</label></p>
+            <p><input type="radio" id="mul" name="operation" value="*">
+                <label for="mul">*</label></p>
+            <p><input type="radio" id="div" name="operation" value="/">
+                <label for="div">/</label></p>
+        </div>
+        <button id="calcId" name="calcName" type="submit" class="double-btn">Расчет!</button>
+    </form>
+</div>
+</body>
+</html>
